@@ -1,5 +1,5 @@
 type Props = Readonly<{
-  testid: string;
+  testid?: string;
   label: string;
   text: string;
   onClick: () => void;
