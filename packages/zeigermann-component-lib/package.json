@@ -5,5 +5,6 @@
   "scripts": {
     "compile": "tsc",
     "compile:watch": "tsc -w"
-  }
+  },
+  "gitHead": "fa3bae593b0d116860da400be8b19660e6a037df"
 }
