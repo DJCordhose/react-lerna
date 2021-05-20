@@ -3,6 +3,7 @@
   "version": "0.1.0-alpha.0",
   "license": "MIT",
   "scripts": {
-    "compile": "tsc"
+    "compile": "tsc",
+    "compile:watch": "tsc -w"
   }
 }
