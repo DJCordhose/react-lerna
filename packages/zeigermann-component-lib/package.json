@@ -6,5 +6,5 @@
     "compile": "tsc",
     "compile:watch": "tsc -w"
   },
-  "gitHead": "8610638c45c127754b9eadc317f17c3f88f20e66"
+  "gitHead": "d18667f92af76cac80a52b29fb6de8a4f1d8585b"
 }
