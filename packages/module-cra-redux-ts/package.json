@@ -1,6 +1,6 @@
 {
-  "name": "module-1",
-  "version": "0.1.0-alpha.0",
+  "name": "module-cra-redux-ts",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
