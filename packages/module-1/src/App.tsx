@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
 
-import { AriaButton } from "zeigermann-component-lib";
+import { AriaButton, sayHi} from "zeigermann-component-lib";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
-        <AriaButton testid='oha' label='Click mich' text='Click mich' onClick={() => console.log('Juchu')}></AriaButton>
+        <AriaButton testid='oha' label='Click mich' text='Click mich' onClick={() => console.log(sayHi("Olli"))}></AriaButton>
         </p>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
