@@ -712,7 +712,7 @@
   dependencies:
     "@babel/plugin-transform-react-jsx" "^7.12.17"
 
-"@babel/plugin-transform-react-jsx@^7.12.17", "@babel/plugin-transform-react-jsx@^7.13.12":
+"@babel/plugin-transform-react-jsx@^7.12.17", "@babel/plugin-transform-react-jsx@^7.13.12", "@babel/plugin-transform-react-jsx@^7.14.3":
   version "7.14.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.14.3.tgz#0e26597805cf0862da735f264550933c38babb66"
   integrity sha512-uuxuoUNVhdgYzERiHHFkE4dWoJx+UFVyuAl0aqN8P2/AKFHwqgUC5w2+4/PjpKXJsFgBlYAFXlUmDQ3k3DUkXw==
@@ -4883,3 +4883,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zeigermann-component-lib@latest:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/zeigermann-component-lib/-/zeigermann-component-lib-0.1.9.tgz#23adc873360e372b29b31ff179b799cdf8cb8a65"
+  integrity sha512-qTEq+X+BwGi8/IoGxDm1HvS74Ltekcr5m4qEZxWCqeZvcNReFjFBmZa36eKS4JReM9FZBLR/bj9uBOBz/VW9UQ==

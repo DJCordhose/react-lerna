@@ -12,7 +12,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "clean": "rm -rf dist"
-
   },
-  "gitHead": "7c665356e45d81678fce7f080d46aea688f52d7a"
+  "gitHead": "7c665356e45d81678fce7f080d46aea688f52d7a",
+  "devDependencies": {
+    "@types/react": "^17.0.6"
+  }
 }

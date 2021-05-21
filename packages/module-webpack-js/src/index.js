@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import { AriaButton, sayHi} from "zeigermann-component-lib";
+
 class HelloMessage extends React.Component {
     render() {
       return (
         <div>
-          Hiho, {this.props.name}
+          <p>Hiho, {this.props.name}</p>
+          <p><AriaButton testid='oha' label='Click mich' text='Click mich' onClick={() => console.log(sayHi("Olli"))} /></p>
         </div>
       );
     }
@@ -15,3 +18,5 @@ class HelloMessage extends React.Component {
     <HelloMessage name="Olli" />,
     document.getElementById('root')
   );
+
+  module.hot.accept();
