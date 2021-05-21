@@ -2,9 +2,17 @@
   "name": "zeigermann-component-lib",
   "version": "0.1.9",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "prepublish": "tsc",
   "scripts": {
-    "compile": "tsc",
-    "compile:watch": "tsc -w"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rm -rf dist"
+
   },
   "gitHead": "7c665356e45d81678fce7f080d46aea688f52d7a"
 }
