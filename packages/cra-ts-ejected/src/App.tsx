@@ -2,11 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { AriaButton, sayHi} from "zeigermann-component-lib";
+
+function callback() {
+  console.log(sayHi("Olli"))
+}
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          <AriaButton testid='oha' label='Click mich' text='Click mich' onClick={callback}></AriaButton>
+        </p>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>

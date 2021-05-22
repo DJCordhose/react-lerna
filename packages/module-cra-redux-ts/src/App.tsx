@@ -5,6 +5,10 @@ import './App.css';
 
 import { AriaButton, sayHi} from "zeigermann-component-lib";
 
+function callback() {
+  console.log(sayHi("Olli"))
+}
+
 function App() {
   return (
     <div className="App">
@@ -12,7 +16,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
-        <AriaButton testid='oha' label='Click mich' text='Click mich' onClick={() => console.log(sayHi("Olli"))}></AriaButton>
+          <AriaButton testid='oha' label='Click mich' text='Click mich' onClick={() => callback()}></AriaButton>
         </p>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.

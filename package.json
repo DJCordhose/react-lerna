@@ -5,6 +5,6 @@
     "lerna": "^4.0.0"
   },
   "scripts": {
-    "lerna-link": "lerna link --force-local"
+    "lerna:link": "lerna link --force-local"
   }
 }
