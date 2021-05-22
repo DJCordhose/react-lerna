@@ -363,6 +363,12 @@ module.exports = function (webpackEnv) {
         // Disable require.ensure as it's not a standard language feature.
         { parser: { requireEnsure: false } },
         {
+          test: /\.(js|mjs|jsx|ts|tsx)$/,
+          enforce: "pre",
+          exclude: /@babel(?:\/|\\{1,2})runtime/,
+          use: ["source-map-loader"],
+        },
+        {
           // "oneOf" will traverse all following loaders until one will
           // match the requirements. When no loader matches it will fall
           // back to the "file" loader at the end of the loader list.
