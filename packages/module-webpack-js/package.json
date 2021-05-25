@@ -1,6 +1,6 @@
 {
   "name": "module-webpack-js",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "private": true,
   "license": "MIT",
   "dependencies": {

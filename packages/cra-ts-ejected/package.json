@@ -1,6 +1,6 @@
 {
   "name": "cra-ts-ejected",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
