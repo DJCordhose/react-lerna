@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {useStore } from './Store';
+import { observer } from "mobx-react";
 
-function App() {
-  return (
+import { LoadingIndicator } from "zeigermann-component-lib";
+
+const App = observer(() => {
+  const store = useStore();
+
+  const isInitialized: boolean = store.initialized;
+
+  useEffect(() => {
+
+    (async () => {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    store.updateHost("localhost");
+    store.updatPort(80);
+    })();
+  }, [store]);
+  const app = (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -18,9 +34,14 @@ function App() {
         >
           Learn React
         </a>
+        <p>{store.host}, {store.port}</p>
       </header>
     </div>
   );
-}
+
+    return isInitialized ? app : <LoadingIndicator title="Loading..." />;
+
+
+})
 
 export default App;
