@@ -6,8 +6,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 // we probably want full sources
 import { terser } from 'rollup-plugin-terser';
-import autoprefixer from 'autoprefixer';
 // import postcss from "rollup-plugin-postcss";
+// can create nice css.d.ts files
 import postcss from 'rollup-plugin-postcss-modules';
 import del from "rollup-plugin-delete";
 import pkg from "./package.json";
@@ -21,14 +21,11 @@ export default {
   ],
   plugins: [
     postcss({
-      // plugins: [autoprefixer()],
       writeDefinitions: true,
       modules: true,
       sourceMap: true,
-        extract: true,
-            minimize: true,
-      // Or with custom options for `postcss-modules`
-      // modules: {}
+      extract: true,
+      minimize: true,
     }),
     external(),
     resolve(),
