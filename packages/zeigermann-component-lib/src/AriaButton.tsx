@@ -1,7 +1,6 @@
 import React from "react";
 
-// import styles from "./AriaButton.module.css";
-import "./AriaButton.module.css";
+import styles from "./AriaButton.module.css";
 
 type Props = Readonly<{
   testid?: string;
@@ -18,6 +17,7 @@ export function AriaButton({ testid, label, text, onClick, inProgress=false, fla
     <button
       data-testid={testid}
       className={`
+      ${styles.button}
       bg-gray-100 border-2 border-gray-900
       hover:border-gray-500 hover:bg-gray-200 
       active:border-gray-200 active:bg-gray-400 
