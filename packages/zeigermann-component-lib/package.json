@@ -2,8 +2,11 @@
   "name": "zeigermann-component-lib",
   "version": "0.1.12",
   "license": "MIT",
-  "main": "dist/index.js",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "source": "src/index.ts",
   "files": [
     "/dist",
     "/src",
@@ -11,12 +14,22 @@
   ],
   "prepublish": "tsc",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build": "npm run clean && npm run build:ts && rollup -c",
+    "build:watch": "rollup -c --watch",
+    "build:ts": "tsc --build",
+    "build:ts:watch": "tsc --build --watch",
     "clean": "rm -rf dist"
   },
   "gitHead": "7c665356e45d81678fce7f080d46aea688f52d7a",
   "devDependencies": {
-    "@types/react": "^17.0.6"
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/react": "^17.0.6",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.50.5",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.3.2"
   }
 }
