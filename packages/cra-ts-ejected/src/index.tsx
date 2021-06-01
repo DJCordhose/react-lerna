@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import 'zeigermann-component-lib/dist/index.cjs.css';
+import 'zeigermann-component-lib/dist/index.esm.css';
 
 ReactDOM.render(
   <React.StrictMode>
