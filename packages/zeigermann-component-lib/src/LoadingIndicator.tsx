@@ -1,6 +1,6 @@
 import React from "react";
 
-type Props = Readonly<{ title: string }>;
+type Props = { title: string };
 
 export function LoadingIndicator({ title }: Props) {
   return (

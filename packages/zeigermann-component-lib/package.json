@@ -19,17 +19,25 @@
     "build:ts:watch": "tsc --build --watch",
     "clean": "rm -rf dist",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook"
   },
   "gitHead": "7c665356e45d81678fce7f080d46aea688f52d7a",
   "devDependencies": {
+    "@babel/core": "^7.14.3",
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-typescript": "^8.2.1",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@types/jest": "^26.0.23",
     "@types/react": "^17.0.6",
+    "babel-loader": "^8.2.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.3",
     "postcss": "^8.3.0",
@@ -47,5 +55,6 @@
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  }
+  },
+  "dependencies": {}
 }
