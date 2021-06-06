@@ -1,6 +1,6 @@
-export const button: string
+export const bg: string
 interface Namespace {
-	"button": string,
+	"bg": string,
 }
 declare const flexContainerModule: Namespace
 export default flexContainerModule
