@@ -16,7 +16,7 @@ const App = observer(() => {
     (async () => {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       store.updateHost("localhost");
-      store.updatPort(80);
+      store.updatePort(80);
     })();
   }, [store]);
   const app = (
