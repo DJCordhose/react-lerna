@@ -1,4 +1,4 @@
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, autorun  } from "mobx";
 import React, { useContext } from "react";
 
 // https://mobx.js.org/defining-data-stores.html
@@ -28,6 +28,11 @@ const backendConfigStore = new BackendConfigStore();
 type IStoreContext = {
   backendConfigStore: BackendConfigStore;
 };
+
+// https://mobx.js.org/reactions.html#autorun
+autorun(() => {
+  console.log(backendConfigStore.port)
+})
 
 export const StoreContext = React.createContext<IStoreContext>(null!);
 
