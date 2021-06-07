@@ -11,6 +11,7 @@ const App = observer(() => {
 
   const isInitialized: boolean = store.initialized;
 
+  // a real effect could also be inside the store as a mobx construct
   useEffect(() => {
     (async () => {
       await new Promise((resolve) => setTimeout(resolve, 1000));

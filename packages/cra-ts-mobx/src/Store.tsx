@@ -1,4 +1,4 @@
-import { makeAutoObservable, autorun  } from "mobx";
+import { makeAutoObservable, autorun, when  } from "mobx";
 import React, { useContext } from "react";
 
 // https://mobx.js.org/defining-data-stores.html
@@ -8,6 +8,19 @@ class BackendConfigStore {
 
   constructor() {
     makeAutoObservable(this);
+    
+    // https://mobx.js.org/reactions.html#when
+    when(() => this.initialized, () => console.log('Ready to begin'));
+    // same using an explicit promise
+    (async () => {
+      await when(() => this.initialized)
+      console.log('Ready to begin')
+    })()
+    // https://mobx.js.org/reactions.html#autorun
+    autorun(() => {
+      console.log(this.port)
+    })
+    
   }
 
   updateHost(host: string) {
@@ -29,6 +42,7 @@ type IStoreContext = {
   backendConfigStore: BackendConfigStore;
 };
 
+// effects can be defined anywhere
 // https://mobx.js.org/reactions.html#autorun
 autorun(() => {
   console.log(backendConfigStore.port)
