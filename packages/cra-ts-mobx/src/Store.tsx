@@ -10,7 +10,7 @@ class BackendConfigStore {
     makeAutoObservable(this);
     
     // https://mobx.js.org/reactions.html#when
-    when(() => this.initialized, () => console.log('Ready to begin'));
+    // when(() => this.initialized, () => console.log('Ready to begin'));
     // same using an explicit promise
     (async () => {
       await when(() => this.initialized)
@@ -27,7 +27,7 @@ class BackendConfigStore {
     this.host = host;
   }
 
-  updatPort(port: number) {
+  updatePort(port: number) {
     this.port = port;
   }
 
@@ -38,16 +38,16 @@ class BackendConfigStore {
 
 const backendConfigStore = new BackendConfigStore();
 
+// effects can be defined anywhere
+// https://mobx.js.org/reactions.html#autorun
+// autorun(() => {
+//   console.log(backendConfigStore.port)
+// })
+
+
 type IStoreContext = {
   backendConfigStore: BackendConfigStore;
 };
-
-// effects can be defined anywhere
-// https://mobx.js.org/reactions.html#autorun
-autorun(() => {
-  console.log(backendConfigStore.port)
-})
-
 export const StoreContext = React.createContext<IStoreContext>(null!);
 
 type StoreProviderProps = {
