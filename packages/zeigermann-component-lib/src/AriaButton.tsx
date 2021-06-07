@@ -24,7 +24,7 @@ type Props = {
    */
   inProgress?: boolean;
   /**
-   * Layout option for wide disaply
+   * Layout option for wide display
    */
   flat?: boolean;
 };
