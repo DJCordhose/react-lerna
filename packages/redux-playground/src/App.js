@@ -3,7 +3,7 @@ import './App.css';
 
 import { useSelector, useDispatch } from 'react-redux'
 
-import {DECREMENT, INCREMENT, selectCount} from './store'
+import {incremented, decremented, selectCount} from './store'
 
 function App() {
   const dispatch = useDispatch();
@@ -24,8 +24,8 @@ function App() {
           Learn React
         </a>
         <p>Counter: {count}</p>
-        <button onClick={() => dispatch(DECREMENT)}>Runter</button>
-        <button onClick={() => dispatch(INCREMENT)}>Hoch</button>
+        <button onClick={() => dispatch(decremented())}>Runter</button>
+        <button onClick={() => dispatch(incremented())}>Hoch</button>
       </header>
     </div>
   );
