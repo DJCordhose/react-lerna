@@ -1,4 +1,4 @@
-import { createStore } from 'redux'
+import { createStore } from "redux";
 
 /**
  * This is a reducer - a function that takes a current state value and an
@@ -14,30 +14,41 @@ import { createStore } from 'redux'
  */
 function counterReducer(state = { value: 0 }, action) {
   switch (action.type) {
-    case 'counter/incremented':
-      return { value: state.value + 1 }
-    case 'counter/decremented':
-      return { value: state.value - 1 }
+    case "counter/incremented":
+      return { 
+          ...state,
+          value: state.value + 1
+         };
+    case "counter/decremented":
+      return { value: state.value - 1 };
     default:
-      return state
+      return state;
   }
 }
 
 // Create a Redux store holding the state of your app.
 // Its API is { subscribe, dispatch, getState }.
-let store = createStore(counterReducer)
+export let store = createStore(
+  counterReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 // You can use subscribe() to update the UI in response to state changes.
 // Normally you'd use a view binding library (e.g. React Redux) rather than subscribe() directly.
 // There may be additional use cases where it's helpful to subscribe as well.
 
-store.subscribe(() => console.log(store.getState()))
+store.subscribe(() => console.log(store.getState()));
 
 // The only way to mutate the internal state is to dispatch an action.
 // The actions can be serialized, logged or stored and later replayed.
-store.dispatch({ type: 'counter/incremented' })
+store.dispatch({ type: "counter/incremented" });
 // {value: 1}
-store.dispatch({ type: 'counter/incremented' })
+store.dispatch({ type: "counter/incremented" });
 // {value: 2}
-store.dispatch({ type: 'counter/decremented' })
+store.dispatch({ type: "counter/decremented" });
 // {value: 1}
+
+export const INCREMENT = { type: "counter/incremented" };
+export const DECREMENT = { type: "counter/decremented" };
+
+export const selectCount = (state) => state.value;

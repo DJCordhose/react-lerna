@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { useSelector, useDispatch } from 'react-redux'
+
+import {DECREMENT, INCREMENT, selectCount} from './store'
+
 function App() {
+  const dispatch = useDispatch();
+  const count = useSelector(selectCount);
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +23,9 @@ function App() {
         >
           Learn React
         </a>
+        <p>Counter: {count}</p>
+        <button onClick={() => dispatch(DECREMENT)}>Runter</button>
+        <button onClick={() => dispatch(INCREMENT)}>Hoch</button>
       </header>
     </div>
   );
