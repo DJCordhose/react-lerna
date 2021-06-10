@@ -17,6 +17,7 @@
     "build:watch": "rollup -c --watch",
     "build:ts": "tsc --build",
     "build:ts:watch": "tsc --build --watch",
+    "prepublish": "yarn build",
     "clean": "rm -rf dist",
     "test": "jest",
     "test:watch": "jest --watch",
