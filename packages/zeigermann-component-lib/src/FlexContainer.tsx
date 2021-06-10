@@ -1,7 +1,5 @@
 import React from "react";
 
-import styles from "./FlexContainer.module.css";
-
 import type { PropsWithChildren } from "react";
 
 
@@ -13,7 +11,6 @@ export function FlexContainer({ children, center = false }: Props) {
   return (
     <div
       className={`
-      ${styles.bg}
       flex ${
         center ? "justify-center" : "justify-between"
       } border-gray-900 border-2 m-2 overflow-hidden`}
